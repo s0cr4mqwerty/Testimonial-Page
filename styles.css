@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root{
+    --fuente: "Sora", sans-serif;
+    --fuente-titulo: 2.25rem;
+    --fuente-cuerpo: 1.25rem; 
+    --fuente-cuerpo2: 1rem;
+    --fuente-lista: 0.875rem;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    background-color: #FAFAF9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente);
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 100px;
+}
+.contenedor__informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contenedor__estrella{
+    width: 30px;
+    padding: 5px;
+    border-radius: 150px;
+    background-color: #fef29a;
+}
+.contenedor__titulo{
+    font-size: var(--fuente-titulo);
+    font-weight: 600;
+}
+.contenedor__texto{
+    font-size: var(--fuente-cuerpo);
+    font-weight: 300;
+    line-height: 2;
+}
+.contenedor__informacion, .comentario{
+    width: 50%;
+}
+
+.contenedor__lista{
+    list-style-position: inside;
+}
+.contenedor__lista__item{
+    background-image: url(assets/Done_ring_round_fill.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    list-style: none;
+    padding: 10px 0px 10px 30px;
+    font-size: var(--fuente-lista);
+}
+
+.comentario{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.comentario__redsocial:first-child{
+    margin-left: auto;
+    /* border: solid 1px red; */
+}
+.comentario__redsocial{
+    padding: 35px;
+    width: 60%;
+    border-radius: 16px;
+    /* border: solid 1px black; */
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 100px 0px #f4f4f3;
+}
+.imagenes{
+    display: flex;
+}
+.comentario__imagen{    
+    align-items: center;
+    width: 100px;
+    box-sizing: border-box;
+}
+.comentario__imagen:first-child{
+    margin-right: 15px;
+    font-size: var(--fuente-cuerpo2);
+}
+.review__nombre{
+    margin: 14px 0px 12px 0px;
+    font-size: var(--fuente-cuerpo2);
+}
+.review__texto{
+    font-size: var(--fuente-cuerpo2);
+    color: #52525A;
+    line-height: 1.7;
+}
+
+@media(max-width:640px){
+    .contenedor{
+        flex-direction: column;
+    }
+    .contenedor__informacion, .comentario{
+        width: 100%;
+    }
+}
